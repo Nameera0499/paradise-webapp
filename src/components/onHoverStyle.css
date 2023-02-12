@@ -1,0 +1,29 @@
+.custom-scrollbar {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #922f34;
+    border-radius: 20px;
+    border: 2px solid #922f34;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 20px;
+}
+
+.custom-scrollbar-content {
+    display: flex;
+}
+
+.custom-scrollbar-content>* {
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-right: 10px;
+}

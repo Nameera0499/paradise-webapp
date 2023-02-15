@@ -9,7 +9,7 @@ export default function Recommend({ src, label, height, width,style }) {
         <Stack sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <img src={src} height={height} width={width} style={style} />
 
-          <Typography component="div" sx={{ fontSize: "24px", fontWeight: 900, mt: 3 }}>
+          <Typography component="div" sx={{ fontSize: { xs: "16px", sm: "24px" }, fontWeight: 900, mt: 3, marginLeft:"-50px" }}>
             {label}
           </Typography>
         </Stack>

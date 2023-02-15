@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 
-function Offer({ src }) {
+function Offer() {
     return (
         <>
             <div>
@@ -13,7 +13,7 @@ function Offer({ src }) {
                     <Carousel.Item interval={1350}>
                         <img
                             height={"250px"}
-                            className="d-block w-100"
+                            className="w-100"
                             src="/images/offer1.jpg"
                             alt="Image One"
                         />
@@ -21,7 +21,7 @@ function Offer({ src }) {
                     <Carousel.Item interval={1350}>
                         <img
                             height={"250px"}
-                            className="d-block w-100"
+                            className="w-100"
                             src="/images/offer2.jpg"
                             alt="Image Two"
                         />
@@ -29,7 +29,7 @@ function Offer({ src }) {
                     <Carousel.Item interval={1350}>
                         <img
                             height={"250px"}
-                            className="d-block w-100"
+                            className="w-100"
                             src="/images/offer3.jpg"
                             alt="Image Three"
                         />
@@ -37,7 +37,7 @@ function Offer({ src }) {
                     <Carousel.Item interval={1350}>
                         <img
                             height={"250px"}
-                            className="d-block w-100"
+                            className="w-100"
                             src="/images/offer4.jpg"
                             alt="Image Four"
                         />

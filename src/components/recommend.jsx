@@ -5,6 +5,16 @@ import Recommend from './card';
 import CustomScrollbar from './srollable';
 
 export default function Recommendation() {
+    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
+    const setWindowDimensions = () => {
+        setWindowWidth(window.innerWidth)
+    }
+    React.useEffect(() => {
+        window.addEventListener('resize', setWindowDimensions);
+        return () => {
+            window.removeEventListener('resize', setWindowDimensions)
+        }
+    }, [])
     const exploreMenu = [
         {
             id: 1,
@@ -20,37 +30,28 @@ export default function Recommendation() {
             id: 3,
             label: "Biryani",
             src: "/images/Biryani.jpg"
-        }, {
+        },
+        {
             id: 4,
-            label: "Kebabs",
-            src: "/images/Kebab.jpg"
-        }, {
-            id: 5,
-            label: "Retail Products",
-            src: "/images/retail.jpeg"
-        }, {
-            id: 6,
             label: "Desserts",
             src: "/images/Dessert.jpg"
-        }, {
-            id: 7,
+        },
+        {
+            id: 5,
             label: "Beverages",
             src: "/images/Beverage.jpg"
-        }, {
-            id: 8,
+        },
+        {
+            id: 6,
             label: "Accompaniments",
             src: "/images/accompaniments.jpg"
-        }, {
-            id: 9,
-            label: "Haleem",
-            src: "/images/Haleem.jpg"
-        },
+        }
     ]
     return (
         <Box sx={{ mt: 5 }}>
-            <Stack direction="row" sx={{ p: 5 }}>
+            <Stack direction="row" sx={{ p: { xs: 2, sm: 5 } }}>
                 <Typography sx={{
-                    fontSize: "24px",
+                    fontSize: { xs: "16px", sm: "24px" },
                     fontWeight: 900
                 }}>Explore Menu</Typography>
             </Stack>
@@ -65,8 +66,8 @@ export default function Recommendation() {
                                         key={i.id}
                                         src={i.src}
                                         label={i.label}
-                                        height="200px"
-                                        width="200px"
+                                        height="150px"
+                                        width="150px"
                                         style={
                                             { borderRadius: "50%", marginRight: "50px" }
                                         } />
@@ -74,6 +75,8 @@ export default function Recommendation() {
                             )
                         })
                     }
+                    {windowWidth > 900 ? <img src='/images/rightIcon.png' height={"30px"} /> : null}
+
                 </Stack>
             </CustomScrollbar>
 

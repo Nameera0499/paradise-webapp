@@ -20,22 +20,22 @@ export default function Recommendation() {
         {
             id: 1,
             label: "Try New",
-            src: "/images/tryNew.png"
+            src: "/images/try.jpeg"
         },
         {
             id: 2,
             label: "Combo",
-            src: "/images/combo.jpg"
+            src: "/images/combo.jpeg"
         },
         {
             id: 3,
             label: "Biryani",
-            src: "/images/Biryani.jpg"
+            src: "/images/tryNew.jpeg"
         },
         {
             id: 4,
             label: "Desserts",
-            src: "/images/Dessert.jpg"
+            src: "/images/dessert.jpeg"
         },
         {
             id: 5,
@@ -45,7 +45,7 @@ export default function Recommendation() {
         {
             id: 6,
             label: "Accompaniments",
-            src: "/images/accompaniments.jpg"
+            src: "/images/accomplainment.jpeg"
         }
     ]
     return (<>

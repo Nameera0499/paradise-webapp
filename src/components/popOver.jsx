@@ -13,9 +13,7 @@ export default function BasicPopover({ anchorEl, onClose }) {
     const id = open ? 'simple-popover' : undefined;
 
     return (
-        <div style={{
-            position: "relative",
-        }}>
+        <div id='child'>
             {
                 open ? (<>
                     <div style={{
@@ -25,6 +23,7 @@ export default function BasicPopover({ anchorEl, onClose }) {
                         background: "#fff",
                         position: "fixed",
                         display: "flex",
+                        zIndex: 1
                     }}>
                         <div>
                             <img style={{
@@ -89,7 +88,9 @@ export default function BasicPopover({ anchorEl, onClose }) {
                         borderRadius: "50px 1px 1px 50px",
                         display: "flex",
                         alignItems: "center",
-                        justifyContent: "space-evenly"
+                        justifyContent: "space-evenly",
+                        zIndex: 1
+
                     }}   >
                         <div><img src="/images/close.png" onClick={onClose} /></div>
                         <div><span onClick={onClose}>Close</span></div>

@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Stack, Typography } from '@mui/material';
 import Recommend from './card';
 import CustomScrollbar from './srollable';
+import NavBar from './navbar';
 
 export default function Recommendation() {
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
@@ -47,7 +48,7 @@ export default function Recommendation() {
             src: "/images/accompaniments.jpg"
         }
     ]
-    return (
+    return (<>
         <Box sx={{ mt: 5 }}>
             <Stack direction="row" sx={{ p: { xs: 2, sm: 5 } }}>
                 <Typography sx={{
@@ -81,5 +82,7 @@ export default function Recommendation() {
             </CustomScrollbar>
 
         </Box>
+    </>
+
     );
 }

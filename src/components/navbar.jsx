@@ -10,18 +10,9 @@ import BasicSelect from './select';
 import { Badge, Stack } from '@mui/material';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import BasicPopover from './popOver';
-export default function NavBar({ id }) {
+export default function NavBar({ handleClick }) {
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-
-    const handleClick = (event) => {
-        
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+    
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth)
     const setWindowDimensions = () => {
         setWindowWidth(window.innerWidth)
@@ -35,7 +26,7 @@ export default function NavBar({ id }) {
 
     return (
         <Box >
-            <AppBar position="fixed" sx={{
+            <AppBar sx={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
@@ -105,7 +96,7 @@ export default function NavBar({ id }) {
 
                 </Toolbar>
             </AppBar>
-            {anchorEl ? <BasicPopover anchorEl={anchorEl} onClose={handleClose} /> : null}
+            {/* {anchorEl ? <BasicPopover anchorEl={anchorEl} onClose={handleClose} /> : null} */}
         </Box >
     );
 }

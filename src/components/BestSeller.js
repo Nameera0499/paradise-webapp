@@ -106,7 +106,7 @@ export default function BestSeller() {
         <Box sx={{ mt: 5 }}>
             <Stack direction="row" >
                 <Typography sx={{
-                    fontSize: "24px",
+                   fontSize: { xs: "16px", sm: "24px" },
                     fontWeight: 900
                 }}>Best Seller</Typography>
             </Stack>

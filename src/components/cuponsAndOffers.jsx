@@ -10,7 +10,7 @@ export default function CuponsAndOffers({ explore, title }) {
         <Box sx={{ mt: 5 }}>
             <Stack direction="row">
                 <Typography sx={{
-                    fontSize: "24px",
+                    fontSize: { xs: "16px", sm: "24px" },
                     fontWeight: 900
                 }}>{title}</Typography>
             </Stack>
@@ -26,7 +26,7 @@ export default function CuponsAndOffers({ explore, title }) {
                                         src={i.src}
                                         label={i.label}
                                         height="200px"
-                                        width="500px"
+                                        width="470px"
                                         style={{
                                             borderRadius: "10px", marginRight: "30px"
                                         }} />

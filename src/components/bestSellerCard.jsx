@@ -62,7 +62,7 @@ export default function BestSellerCard({ src, title, description, price }) {
                 </div>
                 <div style={{ width: "350px" }}>
                     <div className={classes.title}>
-                        <div style={{ width: "80%" }}>
+                        <div style={{ width: "40%" }}>
                             <Typography component="div" sx={{ fontSize: "20px", fontWeight: 900 }}>
                                 {title}
                             </Typography>

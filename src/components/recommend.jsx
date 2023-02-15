@@ -40,7 +40,7 @@ export default function Recommendation() {
         {
             id: 5,
             label: "Beverages",
-            src: "/images/Beverage.jpg"
+            src: "/images/beverages.jpeg"
         },
         {
             id: 6,
